@@ -95,9 +95,9 @@ app.post("/RegisterFromula", function (req, res) {
     if (userDataArray.findIndex(array => array.login === req.body.login) == "-1" && req.body.login != '') {
         userDataArray.push(req.body)
         userDataArray[userDataArray.length - 1].id = userDataArray.length
-        res.send("<h1>Witaj " + req.body.login + ", Rejestracja zakończona sukcesem </h1><a href='/'>przejdź na stronę główną</a>")
+        res.send("<h1> Rejestracja zakończona sukcesem </h1><a href='/'>przejdź na main</a>")
     } else
-        res.send("<h1>Podane dane zostały wykorzystane lub podane dane były błędne</h1><a href='/'>przejdź na stronę główną</a>")
+        res.send("<h1>błędne dane, lub takie hasło juz istnieje</h1><a href='/'>przejdź na main</a>")
 })
 //logIn formula
 app.post('/LoginFormula', function (req, res) {
@@ -106,7 +106,7 @@ app.post('/LoginFormula', function (req, res) {
         logged = true;
         res.redirect('/admin');
     } else {
-        res.send("<h1>Dane logowania niepoprawne </h1><a href='/'>przejdź na stronę główną</a>")
+        res.send("<h1>Dane logowania niepoprawne </h1><a href='/'>przejdź na main</a>")
     }
 })
 //obsługa adminPanela
