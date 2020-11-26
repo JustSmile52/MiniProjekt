@@ -21,7 +21,7 @@ let userDataArray = [{
 },
 {
     id: 2,
-    login: 'Janek',
+    login: 'Janok',
     password: 'janek123',
     age: '16',
     uczen: 'on',
