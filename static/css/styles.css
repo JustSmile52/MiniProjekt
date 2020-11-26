@@ -1,0 +1,12 @@
+.main_div{
+    position: relative;
+    height: 100px;
+    width: 100%;
+}
+.navik{
+    margin-left: 50px;
+    color: brown;
+}
+.navik>a{
+    color: black;
+}
